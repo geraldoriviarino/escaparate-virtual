@@ -1,0 +1,190 @@
+.opciones_productos
+    margin-top: 30px
+    display: flex!important
+    justify-content: space-around
+    flex-direction: row
+    flex-wrap: wrap
+.contenedor-opciones-productos
+    display: flex
+    flex-wrap: wrap
+.opcion-producto
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    background-color: #FFFFFF
+    height: 50px
+    box-shadow: 3px 3px 8px grey
+    width: 20%
+    min-width: 15rem
+    max-width: 15rem
+    margin: 0 3rem .8rem 0
+    +transition(opacity .5s ease-in)
+
+    &:hover        
+        cursor: pointer
+        background-color: $color_primario
+        box-shadow: 3px 3px 20px grey
+        +transition(all 175ms ease-in)
+        +transform(scale(1.2))
+
+        .icono
+            color: $color_rojo_oscuro_1
+        .linea-texto
+            color: white
+
+    *
+        margin-left: 10%
+
+    .icono
+        color: $color_primario
+        font-size: 2em
+
+    .linea-texto
+        color: $color_gris_oscuro
+        font-weight: bold
+
+
+
+.titulo2.titulo-productos
+    font-weight: bold
+    margin: 40px 0 0 10px
+
+.saludo_titulo
+    color: #818181
+    font-weight: normal
+
+.contenedor_productos
+    display: flex
+    justify-content: center
+.producto
+    background-color: #FFFFFF
+    text-align: center
+    margin: 2rem 2rem 0 0
+    padding-bottom: 10px
+    max-width: $ancho_productos + px!important
+    min-width: $ancho_productos + px!important
+    box-shadow: 3px 3px 8px grey
+    +transition(all 120ms ease-in)
+    
+
+    .detalle-producto
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba($color_primario, 0.7)
+        overflow: hidden
+        width: 100%
+        height: 0
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+        .icono
+            color: $color_rojo_oscuro_1
+            font-size: 1rem
+            +transition(all .2s ease-in-out)
+            &:hover
+                color: $color_rojo_oscuro_2
+                cursor: pointer
+
+    .boton-detalle-producto
+        background-color: $color_rojo_oscuro_1
+        color: white
+        border: none
+        padding: 10px
+        position: absolute
+        cursor: pointer
+        top: 50%
+        left: 50%
+        +transform(translate(-50%, -50%))
+
+    &:hover
+        box-shadow: 3px 3px 8px grey
+        cursor: pointer
+        +transition(all, 120ms, ease-in)
+        +transform(scale(1.05))
+
+        .detalle-producto
+            height: 10%
+            +transition(all .5s ease)
+
+
+.categoria-producto
+    background-color: $color_primario
+    width: 40%
+    margin: 10px 0 0 10%
+    padding: 0 5px 0 5px
+    +border-radius(10px)
+
+    .linea-texto
+        color: white
+        font-weight: bold
+
+.foto-producto
+    width: 125px
+    height: auto
+    margin: 30px 0 30px 0
+
+.nombre-producto
+    color: $color_gris_oscuro
+    font-weight: bold
+    margin: 30px 10px 0 10px
+
+.precio-producto
+    font-size: 2em
+    font-style: italic
+    font-weight: bold
+
+.info-envio
+    margin-bottom: 10px
+    font-weight: bold
+    color: #7AB64B
+
+.vertical-padding-10
+    padding: 10px 0 10px 0
+
+.caja-comentarios
+    box-shadow: 3px 3px 8px grey
+    padding: 1.2rem 1rem
+    position: absolute
+    background-color: $color_primario
+    width: $ancho_productos + px
+    +border-radius(10px)
+    border: 2px solid $color_rojo_oscuro_1
+
+    .titulo3
+        color: white
+
+    .form-comentarios
+        display: flex
+        flex-wrap: wrap
+
+        .campo-texto
+            width: 100%
+
+    .contenedor-comentarios
+        margin: 1rem 0 1rem 0
+        background-color: white
+        +border-radius(10px)
+        height: 10rem
+        width: 100%
+        overflow: hidden
+
+        .comentarios
+            height: 99%
+            width: 100%
+            overflow-Y: scroll
+            margin-left: 12px
+
+            .comentario
+                border-bottom: 1px solid $color_rojo_oscuro_2
+
+                .nombre-usuario
+                    font-weight: bold
+                    color: $color_rojo_oscuro_1
+
+    .btn
+        width: 100%
+        background-color: $color_rojo_claro
+        color: $color_rojo_oscuro_2

@@ -1,0 +1,62 @@
+.header
+    background-color: #FFFFFF
+    text-align: center
+    padding: 0
+
+    .contenedor-cabecera
+        display: flex
+        align-items: center
+
+        .nombre-logo
+            font-size: 2em
+            font-weight: bold
+
+.container_busqueda .form
+    width: 100%
+
+.form-busqueda
+    flex-flow: row nowrap
+    .btn
+        margin-left: 1rem
+
+// Este elemento contiene el inicio de sesión del usuario y el carrito.
+// Cada uno está compuesto por un icono (i) y por un texto (enlace).
+
+.container_usuario
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    margin: 0 2rem 0 2rem
+    
+    .nombre-usuario,.texto-carrito
+        margin-right: .5rem
+
+    .icono.usuario,.icono.cesta
+        display: inline
+
+    .container_sesion,.form-busqueda
+        margin-right: 1.3rem
+
+    .enlace
+        font-size: .9rem
+        color: $color_rojo_oscuro_1
+        
+        &:hover
+            .icono
+                color: $color_rojo_oscuro_2
+                +transition(color .175s ease-in)
+            .linea-texto
+                color: $color_primario
+                +transition(color .175s ease-in)
+
+    .icono
+        width: 100%
+        font-size: 1.5em
+        color: $color_gris_oscuro
+        +transition(color .35s ease-in)
+    .linea-texto
+        color: $color_rojo_oscuro_1
+        font-weight: bold
+        +transition(color .35s ease-in)
+

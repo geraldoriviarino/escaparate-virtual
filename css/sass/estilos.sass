@@ -1,0 +1,121 @@
+@import variables
+@import fonts
+@import clases
+@import cabecera
+@import navegacion
+@import contenido
+@import pie
+@import scroll
+@import media-queries
+
+.contenedor_formulario
+    width: 270px
+    height: 170px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .formulario
+        display: flex
+        justify-content: space-around
+        align-items: space-around
+        flex-direction: column
+        margin: 0 15% 0 15%
+
+    .contenedor-botones
+        display: flex
+        justify-content: space-between
+    .btn
+        margin: 12px 8px 0 0
+
+
+//Boton para subir al inicio de la página
+.btn_top
+    display: none
+    position: fixed
+    bottom: 50px
+    right: 150px
+    z-index: 99
+    border: none
+    outline: none
+    background-color: $color_primario
+    color: white
+    cursor: pointer
+    padding: 15px
+    border-radius: 50%
+    box-shadow: 3px 3px 8px #222
+    
+    &:hover
+        opacity: 1
+        background-color: $color_primario
+        color: white
+        +transition(opacity .25s ease-in)
+.mensaje_cookies
+    background-color: rgba($color_rojo_oscuro_1, .9)
+    color: white
+    position: fixed
+    bottom: 0
+    display: flex
+    justify-content: center
+    z-index: 1000
+
+    .contenedor_cookies
+        width: 50%
+        min-width: 150px
+
+.form .campo-formulario
+    +box-sizing(border-box)
+    width: 150px
+    float: right
+.radio-btn
+    width: 40px!important
+    float: none!important
+
+.form-group
+    width: 350px
+    margin-bottom: 15px
+.contenedor_principal_registro
+    height: 100%
+    display: flex
+    justify-content: center
+    align-content: center
+
+.form_registro
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    .contenedor_formulario_registro
+        background-color: $color_rojo_claro
+        padding: 30px
+        +border-radius(10px)
+        box-shadow: 0px 2px 8px #666
+        margin-top: 30px
+
+    .form
+        display: flex
+        justify-content: center
+        flex-direction: column
+
+        .label
+            color: $color_rojo_oscuro_2
+
+        .contenedor-botones
+            display: flex
+            justify-content: space-around
+
+.btn
+    background-color: $color_primario
+    color: white
+    border-style: double
+    border-color: $color_rojo_oscuro_1
+    padding: 4px
+    +border-radius(10px)
+    box-shadow: 0px 2px 8px #666
+    cursor: pointer
+
+    &:hover
+        +transform(scale(1.1))
+        background-color: rgba($color_primario, .9)

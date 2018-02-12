@@ -1,0 +1,60 @@
+// Clase empleada generalmente para los elementos
+.sin-decoracion
+    text-decoration: none
+.sin-padding
+    padding: 0
+.delimitador-rojo
+    background-color: $color_primario
+    width: 100%
+    height: 4px
+
+.container-logo 
+    .titulo1
+        color: $color_primario        
+        font-family: aguafinaScript
+        font-size: 1.5rem
+        display: inline
+
+    .logo
+        width: 3rem
+        height: auto
+
+.body
+    margin: 0
+    background-color: $color_gris_claro
+
+.campo-texto
+    margin-bottom: 8px
+    +border-radius(10px)
+
+.contenedor_flotante
+    position: fixed
+    right: 300px
+    top: 85px
+    +border-radius(10px)
+    z-index: 1000
+
+.bg-blanco
+    background-color: white
+    
+.color-rojo
+    color: red
+
+.resaltado
+    animation-name: escalado
+    animation-duration: .7s
+
+.to-right
+    margin-left: auto
+
+.to-left
+    margin-right: auto
+
+.escondido
+    display: none
+
+@keyframes escalado
+    from 
+        +transform(scale(1.2))
+    to
+        +transform(scale(1))

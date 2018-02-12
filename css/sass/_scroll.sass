@@ -1,0 +1,19 @@
+//Nav
+.colgado
+	width: 100%
+	position: fixed
+	top: 0
+	z-index: 1000
+	box-shadow: 3px 3px 8px #222
+
+//Rotable
+.contenedor-rotables
+	perspective: 800px
+
+.rotado-pos
+	+transform(rotateX(15deg))
+	+transition(all .2s ease-in)
+
+.rotado-neg
+	+transform(rotateX(-15deg))
+	+transition(all .2s ease-in)

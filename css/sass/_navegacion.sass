@@ -1,0 +1,56 @@
+.nav
+    background-color: white
+    +transition(all 0.35s ease)
+
+.menu
+    +contenido-centrado
+    list-style-type: none
+    justify-content: space-around
+    margin: 0
+    height: 100%
+    background-color: white
+
+    * 
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        +transition(all 0.35s ease)
+
+    .elemento-menu
+        +contenido-centrado
+        height: 100%
+        padding: 0
+        list-style: outside none none
+        font-size: .9em
+
+    .enlace
+        padding: 0.3em 0
+        color: $color_rojo_oscuro_1
+        position: relative
+        display: inline-block
+
+        &:before,
+        &:after
+            height: 2px
+            position: absolute
+            content: ''
+            background-color: $color_primario
+            width: 0
+            +transition(all 0.35s ease)
+
+        &:before
+            top: 0
+            left: 0
+
+        &:after
+            bottom: 0
+            right: 0
+            
+    .enlace:hover,
+    .current .enlace:before
+        color: $color_primario
+
+    .enlace:hover:before,
+    .current .enlace:before,            
+    .current .enlace:before,
+    .enlace:hover:after
+        width: 100%
